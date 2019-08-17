@@ -137,7 +137,6 @@ module.exports = function (app) {
     });
   });
 
-
   // POST route for saving a new visit
   app.post("/api/visits", function (req, res) {
     db.Visit.create({
