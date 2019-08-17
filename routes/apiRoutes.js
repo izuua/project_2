@@ -63,7 +63,7 @@ module.exports = function (app) {
   //      dbPatient api routes
   //////////////////////////////////
 
-  // Get route for getting all of the doctors
+  // Get route for getting all of the patients
   app.get("/api/patients", function (req, res) {
     db.Patient.findAll({}).then(function (dbPatient) {
       res.json(dbPatient);
@@ -71,7 +71,7 @@ module.exports = function (app) {
   });
 
 
-  // POST route for saving a new doctor
+  // POST route for saving a new patient
   app.post("/api/patients", function (req, res) {
     db.Patient.create({
       firstName: req.body.firstName,
@@ -88,8 +88,8 @@ module.exports = function (app) {
     });
   });
 
-  // DELETE route for deleting doctors. 
-  //We can get the id of the doctor to be deleted from
+  // DELETE route for deleting patients. 
+  //We can get the id of the patient to be deleted from
   // req.params.id
 
   app.delete("/api/patients/:id", function (req, res) {
@@ -102,7 +102,7 @@ module.exports = function (app) {
     });
   });
 
-  // PUT route for updating doctor. We can get the updated doctor data from req.body
+  // PUT route for updating patient. We can get the updated patient data from req.body
   app.put("/api/doctors", function (req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
@@ -130,7 +130,7 @@ module.exports = function (app) {
   //      dbVisit api routes
   //////////////////////////////////
 
-  // Get route for getting all of the doctors
+  // Get route for getting all of the visits
   app.get("/api/visits", function (req, res) {
     db.Visit.findAll({}).then(function (dbVisit) {
       res.json(dbVisit);
@@ -138,7 +138,7 @@ module.exports = function (app) {
   });
 
 
-  // POST route for saving a new doctor
+  // POST route for saving a new visit
   app.post("/api/visits", function (req, res) {
     db.Visit.create({
       firstName: req.body.firstName,
@@ -150,8 +150,8 @@ module.exports = function (app) {
     });
   });
 
-  // DELETE route for deleting doctors. 
-  //We can get the id of the doctor to be deleted from
+  // DELETE route for deleting visits. 
+  //We can get the id of the visit to be deleted from
   // req.params.id
 
   app.delete("/api/visits/:id", function (req, res) {
@@ -164,7 +164,7 @@ module.exports = function (app) {
     });
   });
 
-  // PUT route for updating doctor. We can get the updated doctor data from req.body
+  // PUT route for updating doctor. We can get the updated visit data from req.body
   app.put("/api/visits", function (req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
