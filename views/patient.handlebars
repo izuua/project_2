@@ -1,103 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
 
-<head>
-  <meta charset="UTF-8">
-  <title>HEALTHCARE SOLUTIONS</title>
+  <div class="jumbotron">
+    <h1 class="text-center">HEALTHCARE SOLUTIONS</h1>
+    <hr>
+    <h5 class="text-center">Patient Information</h5>
+    <br>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</head>
-
-<body>
-
-  <div class="container">
-
-    <div class="jumbotron">
-      <h1 class="text-center">HEALTHCARE SOLUTIONS</h1>
-      <hr>
-      <h5 class="text-center">Patient Information</h5>
-      <br>
-
-      <div class="text-center">
-        <a href="Doctors">
-          <button class="btn btn-lg btn-primary">Last Visits </button>
-          <!-- <div class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        </a>
-        <a href="Home">
-          <button class="btn btn-lg btn-default">
-            <span class="fa fa-home"></span>
-          </button>
-        </a>
-      </div>
+    <div class="text-center">
+      <a href="Doctors">
+        {{!-- <button class="btn btn-lg btn-primary">Last Visits</button> --}}
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+          Add Visit Notes
+        </button>
+      </a>
+      <a href="Home">
+        <button class="btn btn-lg btn-default">
+          <span class="fa fa-home"></span>
+        </button>
+      </a>
     </div>
-    <div class="card">
-      <div class="card-header">
-        Patient Info
+  </div>
+  <div class="card">
+    <div class="card-header">
+      Patient Info
+    </div>
+    <div class="card-body">
+      <form role="form">
+        <div class="form-group">
+          <label for="reserve-name">First Name</label>
+          <input type="text" class="form-control" id="reserve-name">
+        </div>
+        <div class="form-group">
+          <label for="Last-Name">Last Name</label>
+          <input type="text" class="form-control" id="Last-Name">
+        </div>
+
+        <div class="form-group">
+          <label for="reserve-phone">Phone Number</label>
+          <input type="text" class="form-control" id="reserve-phone">
+        </div>
+        <div class="form-group">
+          <label for="reserve-email">Email</label>
+          <input type="text" class="form-control" id="reserve-email">
+        </div>
+        <div class="form-group">
+          <label for="reserve-unique-id">Unique ID</label>
+          <input type="text" class="form-control" id="reserve-unique-id">
+        </div>
+        <div class="form-group">
+          <label for="reserve-address">Address</label>
+          <input type="text" class="form-control" id="reserve-address">
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city">
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state">
+        </div>
+
+        <button type="submit" class="btn btn-primary submit">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Central Modal Small -->
+<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Change class .modal-sm to change the size of the modal -->
+  <div class="modal-dialog modal-sm" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">New Visit Notes</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="card-body">
+      <div class="modal-body">
         <form role="form">
           <div class="form-group">
-            <label for="reserve-name">First Name</label>
-            <input type="text" class="form-control" id="reserve-name">
+            <label for="visit-notes">Visit Notes</label>
+            <input type="text" class="form-control" id="visit-notes">
           </div>
-          <div class="form-group">
-            <label for="Last-Name">Last Name</label>
-            <input type="text" class="form-control" id="Last-Name">
-          </div>
-
-          <div class="form-group">
-            <label for="reserve-phone">Phone Number</label>
-            <input type="text" class="form-control" id="reserve-phone">
-          </div>
-          <div class="form-group">
-            <label for="reserve-email">Email</label>
-            <input type="text" class="form-control" id="reserve-email">
-          </div>
-          <div class="form-group">
-            <label for="reserve-unique-id">Unique ID</label>
-            <input type="text" class="form-control" id="reserve-unique-id">
-          </div>
-          <div class="form-group">
-            <label for="reserve-address">Address</label>
-            <input type="text" class="form-control" id="reserve-address">
-          </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city">
-          </div>
-          <div class="form-group">
-            <label for="state">State</label>
-            <input type="text" class="form-control" id="state">
-          </div>
-
-          <button type="submit" class="btn btn-primary submit">Submit</button>
-
         </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-sm" id="add-visit-notes">Save changes</button>
       </div>
     </div>
   </div>
-  </div>
-
-</body>
+</div>
