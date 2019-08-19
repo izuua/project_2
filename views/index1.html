@@ -15,18 +15,23 @@
     <div class="jumbotron">
       <h3 class="text-center"><span ></span> HEALTHCARE SOLUTIONS</h3>
       <hr>
-      <form class="form-inline">
-        <div class="form-group mb-2">    
-          <label for="staticEmail2" class="sr-only">User name</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="user name">
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="username" class="form-control" id="username">
         </div>
-        <div class="form-group mx-sm-3 mb-2">
-          <label for="inputPassword2" class="sr-only">Password</label>
-          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
         </div>
-        <a href="/">
-        <button type="submit" class="btn btn-primary mb-2">Log In</button></a>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <br>
+     
 </body>
 </html>
+
