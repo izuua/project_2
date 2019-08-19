@@ -1,25 +1,9 @@
 var db = require("../models");
-
+var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("../views.index.handlebars");
-  });
-
-  app.get("/doctor/:id", function(req, res) {
-    db.Doctor.findAll({
-      where: {
-        id: req.params.id
-      }
-    }).then(function() {
-      res.render("//DOCTOR HTML//");
-    });
-  });
-
-  app.get("/patient", function(req, res) {
-    db.Doctor.findAll({}).then(function() {
-      res.render("//Patient HTML//");
-    });
+    res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
   // Load example page and pass in an example by id
