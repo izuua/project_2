@@ -7,12 +7,12 @@
     <br>
 
     <div class="text-center">
-      <a href="Doctors">
+      
         {{!-- <button class="btn btn-lg btn-primary">Last Visits</button> --}}
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalMd">
           Add Visit Notes
         </button>
-      </a>
+
       <a href="Home">
         <button class="btn btn-lg btn-default">
           <span class="fa fa-home"></span>
@@ -91,11 +91,11 @@
   </ul>
 
 <!-- Central Modal Small -->
-<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="centralModalMd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
 
-  <!-- Change class .modal-sm to change the size of the modal -->
-  <div class="modal-dialog modal-sm" role="document">
+  <!-- Change class .modal-md to change the size of the modal -->
+  <div class="modal-dialog modal-md" role="document">
 
 
     <div class="modal-content">
@@ -109,7 +109,8 @@
         <form role="form">
           <div class="form-group">
             <label for="visit-notes">Visit Notes</label>
-            <input type="text" class="form-control" id="visit-notes">
+            <textarea type="text" class="form-control" id="visit-notes">
+            </textarea>
           </div>
         </form>
       </div>
