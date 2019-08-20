@@ -102,7 +102,7 @@ $("#sign-in-btn").on("click", function (event) {
   event.preventDefault();
 
   var doctorId = $("#doctor-id").val().trim()
-  var url = "/doctor/" + doctorId
+  var url = "/doctor?id=" + doctorId
   console.log(url);
   window.location = url;
 });
@@ -110,15 +110,22 @@ $("#sign-in-btn").on("click", function (event) {
 $("#new-patient-btn").on("click", function (event) {
   event.preventDefault();
 
+  let params = new URLSearchParams(document.location.search.substring(1));
+  let id = params.get("id");
+
+  console.log(id);
+
   var newPatient = {
     firstName: $("#new-first-name").val().trim(),
     lastName: $("#new-last-name").val().trim(),
     phone: $("#new-phone").val().trim(),
     email: $("#new-email").val().trim(),
-    address: $("#new-address").val().trim(),
+    address1: $("#new-address-1").val().trim(),
+    address2: $("#new-address-2").val().trim(),
     city: $("#new-city").val().trim(),
     state: $("#new-state").val().trim(),
-    zip: $("#new-zip").val().trim()
+    zipcode: $("#new-zip").val().trim(),
+    id: id
   };
 
   console.log(newPatient);
@@ -128,7 +135,7 @@ $("#new-patient-btn").on("click", function (event) {
   //     "Content-Type": "application/json"
   //   },
   //   type: "POST",
-  //   url: "api/doctors/",
+  //   url: "api/patient/",
   //   data: JSON.stringify(newPatient)
   // })
 
