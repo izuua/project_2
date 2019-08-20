@@ -21,7 +21,7 @@ module.exports = function(app) {
       phoneNumber: req.body.phoneNumber,
       specialty: req.body.specialty,
       status: req.body.status,
-      DoctorId: req.body.status
+      doctorId: req.body.status
     }).then(function(dbDoctor) {
       res.json(dbDoctor);
     });
