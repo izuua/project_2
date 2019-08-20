@@ -1,36 +1,17 @@
-//creating doctor table
-
-module.exports = function(sequelize, DataTypes) {
-  var Doctor = sequelize.define("Doctor", {
-    drFirstName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        is: ["^[a-z]+$",'i']
-      }
-    },
-    drLastName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        is: ["^[a-z]+$",'i']
-      }
-    },
-    contact: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Doctor = sequelize.define('Doctor', {
+    drFirstName: DataTypes.STRING,
+    drLastName: DataTypes.STRING,
+    userName: DataTypes.STRING,
+    password: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    email: DataTypes.STRING,
     specialty: DataTypes.STRING,
-    status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: true
-    }
-  });
-
+    active: DataTypes.BOOLEAN
+  }, {});
   Doctor.associate = function(models) {
     Doctor.hasMany(models.Patient);
   };
-
   return Doctor;
 };
