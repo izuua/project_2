@@ -98,7 +98,7 @@ var handleDeleteBtnClick = function () {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-$("#sign-in-btn").on("click", function (event)) {
+$("#sign-in-btn").on("click", function (event) {
   event.preventDefault();
 
   var doctorId = $("#doctor-id").val().trim()
