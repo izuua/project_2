@@ -16,9 +16,10 @@ module.exports = function(app) {
     });
   });
   //doctor route
-  app.get("/doctor/:id", function(req, res) {
+  app.get("/doctor", function(req, res) {
     // eslint-disable-next-line prettier/prettier
-    db.Patient.findOne({ where: { id: req.params.id }}).then(function(doctor) {
+    console.log(req.query.id);
+    db.Patient.findOne({ where: { id: req.query.id }}).then(function(doctor) {
       res.render("doctor", {
         doctors: doctor
       });
