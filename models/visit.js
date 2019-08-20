@@ -1,20 +1,14 @@
-//creating visit table
-
-module.exports = function(sequelize, DataTypes) {
-  var Visit = sequelize.define("Visit", {
-    notes: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    }
-  });
-
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Visit = sequelize.define('Visit', {
+    notes: DataTypes.TEXT
+  }, {});
   Visit.associate = function(models) {
-    Visit.belongsTo(models.Patient, {
+    Visit.belongsto(models.Patient, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-
   return Visit;
 };

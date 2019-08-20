@@ -1,49 +1,17 @@
-//creating patient table
-module.exports = function(sequelize, DataTypes) {
-  var Patient = sequelize.define("Patient", {
-    firstName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        is: ["^[a-z]+$",'i']
-      }
-    },
-    lastName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        is: ["^[a-z]+$",'i']
-      }
-    },
-    contact: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    address1: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Patient = sequelize.define('Patient', {
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    email: DataTypes.STRING,
+    address1: DataTypes.STRING,
     address2: DataTypes.STRING,
-    city: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        is: ["^[a-z]+$",'i']
-      }
-    },
-    zipcode: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        not: ["[a-z]",'i']
-      }
-    }
-  });
-
+    city: DataTypes.STRING,
+    state: DataTypes.STRING,
+    zipcode: DataTypes.STRING,
+    doctorId: DataTypes.INTEGER
+  }, {});
   Patient.associate = function(models) {
     Patient.hasMany(models.Visit);
     Patient.belongsTo(models.Doctor, {
@@ -52,6 +20,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-
   return Patient;
 };
