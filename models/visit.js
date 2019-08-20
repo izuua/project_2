@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     notes: DataTypes.TEXT
   }, {});
   Visit.associate = function(models) {
-    Visit.belongsto(models.Patient, {
+    Visit.belongsTo(models.Patient, {
       foreignKey: {
         allowNull: false
       }

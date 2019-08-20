@@ -19,9 +19,9 @@ module.exports = function(app) {
   app.get("/doctor", function(req, res) {
     // eslint-disable-next-line prettier/prettier
     console.log(req.query.id);
-    db.Patient.findOne({ where: { id: req.query.id }}).then(function(doctor) {
+    db.Patient.findAll({ where: { DoctorId: req.query.id }}).then(function(patient) {
       res.render("doctor", {
-        doctors: doctor
+        patients: patient
       });
     });
   });
