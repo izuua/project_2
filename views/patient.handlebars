@@ -68,6 +68,28 @@
 </div>
 </div>
 
+
+
+<div class="card-body">
+  <ul>
+{{#each patients}}
+
+<li>{{firstName}}</li> 
+<li>{{lastName}}</li>
+<li>{{contact}}</li>
+<li>{{address1}}</li>
+<li>{{address2}}</li>
+<li>{{city}}</li>
+<li>{{state}}</li>
+<li>{{zipcode}}</li>
+
+{{else}}
+
+<p>No patient available</p>
+{{/each}}
+</div>
+  </ul>
+
 <!-- Central Modal Small -->
 <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">

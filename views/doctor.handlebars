@@ -39,7 +39,16 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          patient list
+          <div class="card-body">
+            {{#each patients}}
+
+            <a>{{firstName}} {{lastName}}</a>
+
+            {{else}}
+
+            <p>No patient available</p>
+            {{/each}}
+          </div>
         </div>
         <div class="col-6">
           <div class="card">
