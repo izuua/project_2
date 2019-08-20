@@ -17,9 +17,11 @@ module.exports = function(app) {
     db.Doctor.create({
       drFirstName: req.body.drFirstName,
       drLastName: req.body.drLastName,
-      contact: req.body.contact,
+      email: req.body.email,
+      phoneNumber: req.body.phoneNumber,
       specialty: req.body.specialty,
-      status: req.body.status
+      status: req.body.status,
+      DoctorId: req.body.status
     }).then(function(dbDoctor) {
       res.json(dbDoctor);
     });
@@ -47,9 +49,11 @@ module.exports = function(app) {
       {
         drFirstName: req.body.drFirstName,
         drLastName: req.body.drLastName,
-        contact: req.body.contact,
+        email: req.body.email,
+        phoneNumber: req.body.phoneNumber,
         specialty: req.body.specialty,
-        status: req.body.status
+        status: req.body.status,
+        DoctorId: req.body.status
       },
       {
         where: {
@@ -77,7 +81,8 @@ module.exports = function(app) {
     db.Patient.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      contact: req.body.contact,
+      email: req.body.email,
+      phoneNumber: req.body.phoneNumber,
       address1: req.body.address1,
       address2: req.body.address2,
       city: req.body.city,
@@ -110,7 +115,8 @@ module.exports = function(app) {
       {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        contact: req.body.contact,
+        email: req.body.email,
+        phoneNumber: req.body.phoneNumber,
         address1: req.body.address1,
         address2: req.body.address2,
         city: req.body.city,
