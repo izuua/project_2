@@ -32,96 +32,96 @@
       </div>
     </div>
 
-     <div class="container">
+    <div class="container">
       <div class="row">
         <div class="col-6">
-          <div class="card-body">
+          <div class="card-body" style="padding-top:0px">
             {{!-- ................................... --}}
 
-<!-- Card Light -->
- <div class="card"> 
+            <!-- Card Light -->
+            <div class="card">
+              <!-- Card content -->
+             
+                  <div class="card-body">
 
-  <!-- Card content -->
-  <div class="card-body">
+                    <h4 class="card-title">Patient Names</h4>
+                    <hr>
 
-    <h4 class="card-title">Patient Names</h4>
-    <hr>
-    <!-- Text -->
-    <p class="card-text"> {{#each patients}}
+                    <p class="card-text"> {{#each patients}}
 
-            <a href="/patient?id={{id}}"><li>{{firstName}} {{lastName}}</li></a>
+                      <a href="/patient?id={{id}}">
+                        <li>{{firstName}} {{lastName}}</li>
+                      </a>
 
-            {{else}}
+                      {{else}}
 
-            <p>No patient available</p>
-            {{/each}}</p>
-    <!-- Link -->
-    {{!-- <a href="#!" class="black-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a> --}}
+                      <p>No patient available</p>
+                      {{/each}}</p>
 
-  </div>
+                  </div>
 
-</div>
+                </div>
 
-           </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-header">
-              Patient Info
+              </div>
             </div>
-            <div class="card-body">
-              <form role="form">
-                <div class="form-group">
-                  <label for="reserve-name">First Name</label>
-                  <input type="text" class="form-control" id="new-first-name">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-header">
+                  Patient Info
                 </div>
-                <div class="form-group">
-                  <label for="last-name">Last Name</label>
-                  <input type="text" class="form-control" id="new-last-name">
-                </div>
-                <div class="form-group">
-                  <label for="reserve-phone">Phone Number</label>
-                  <input type="text" class="form-control" id="new-phone">
-                </div>
-                <div class="form-group">
-                  <label for="reserve-email">Email</label>
-                  <input type="text" class="form-control" id="new-email">
-                </div>
-                <div class="form-group">
-                  <label for="reserve-address">Address</label>
-                  <input type="text" class="form-control" id="new-address-1">
-                </div>
-                <div class="form-group">
-                  <label for="reserve-address">Address</label>
-                  <input type="text" class="form-control" id="new-address-2">
-                </div>
-                <div class="form-group">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control" id="new-city">
-                </div>
-                <div class="form-group">
-                  <label for="state">State</label>
-                  <input type="text" class="form-control" id="new-state">
-                </div>
-                <div class="form-group">
-                  <label for="zip code">Zip code</label>
-                  <input type="text" class="form-control" id="new-zip">
-                </div>
-                {{!-- <div class="form-group">
+                <div class="card-body">
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="reserve-name">First Name</label>
+                      <input type="text" class="form-control" id="new-first-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="last-name">Last Name</label>
+                      <input type="text" class="form-control" id="new-last-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="reserve-phone">Phone Number</label>
+                      <input type="text" class="form-control" id="new-phone">
+                    </div>
+                    <div class="form-group">
+                      <label for="reserve-email">Email</label>
+                      <input type="text" class="form-control" id="new-email">
+                    </div>
+                    <div class="form-group">
+                      <label for="reserve-address">Address</label>
+                      <input type="text" class="form-control" id="new-address-1">
+                    </div>
+                    <div class="form-group">
+                      <label for="reserve-address">Address</label>
+                      <input type="text" class="form-control" id="new-address-2">
+                    </div>
+                    <div class="form-group">
+                      <label for="city">City</label>
+                      <input type="text" class="form-control" id="new-city">
+                    </div>
+                    <div class="form-group">
+                      <label for="state">State</label>
+                      <input type="text" class="form-control" id="new-state">
+                    </div>
+                    <div class="form-group">
+                      <label for="zip code">Zip code</label>
+                      <input type="text" class="form-control" id="new-zip">
+                    </div>
+                    {{!-- <div class="form-group">
                   <label for="doctor id">Doctor ID</label>
                   <input type="text" class="form-control" id="new-doctor-id">
                 </div> --}}
 
-                <button type="submit" class="btn btn-primary submit" id="new-patient-btn">Submit</button>
+                    <button type="submit" class="btn btn-primary submit" id="new-patient-btn">Submit</button>
 
-              </form>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
 
   </div>
 
