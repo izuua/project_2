@@ -62,7 +62,7 @@ module.exports = {
           isNumeric: true
         }
       },
-      doctorId: {
+      DoctorId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         reference: {

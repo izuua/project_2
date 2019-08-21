@@ -15,7 +15,7 @@ module.exports = {
           isAlphanumeric: true
         }
       },
-      patientId: {
+      PatientId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         reference: {
