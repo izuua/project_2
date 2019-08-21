@@ -21,7 +21,7 @@ module.exports = function(app) {
       phoneNumber: req.body.phoneNumber,
       specialty: req.body.specialty,
       status: req.body.status,
-      doctorId: req.body.status
+      DoctorId: req.body.status
     }).then(function(dbDoctor) {
       res.json(dbDoctor);
     });
@@ -82,12 +82,13 @@ module.exports = function(app) {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
-      phoneNumber: req.body.phoneNumber,
+      phone: req.body.phone,
       address1: req.body.address1,
       address2: req.body.address2,
       city: req.body.city,
       state: req.body.state,
-      zipcode: req.body.zipcode
+      zipcode: req.body.zipcode,
+      DoctorId: req.body.DoctorId
     }).then(function(dbPatient) {
       res.json(dbPatient);
     });

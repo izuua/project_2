@@ -118,25 +118,25 @@ $("#new-patient-btn").on("click", function (event) {
   var newPatient = {
     firstName: $("#new-first-name").val().trim(),
     lastName: $("#new-last-name").val().trim(),
-    phone: $("#new-phone").val().trim(),
     email: $("#new-email").val().trim(),
+    phone: $("#new-phone").val().trim(),
     address1: $("#new-address-1").val().trim(),
     address2: $("#new-address-2").val().trim(),
     city: $("#new-city").val().trim(),
     state: $("#new-state").val().trim(),
     zipcode: $("#new-zip").val().trim(),
-    id: id
+    DoctorId: id
   };
 
   console.log(newPatient);
 
-  // $.ajax({
-  //   headers: {
-  //     "Content-Type": "application/json"
-  //   },
-  //   type: "POST",
-  //   url: "api/patient/",
-  //   data: JSON.stringify(newPatient)
-  // })
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "api/patients/",
+    data: JSON.stringify(newPatient)
+  })
 
 })
