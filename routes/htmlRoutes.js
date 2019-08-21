@@ -8,9 +8,9 @@ module.exports = function(app) {
   });
 
   // patient route
-  app.get("/patients", function(req, res) {
+  app.get("/patients/:id", function(req, res) {
     // eslint-disable-next-line prettier/prettier
-    db.Patient.findAll({}).then(function(patients) {
+    db.Patient.findOne({ where: { PatientId: req.query.id } }).then(function(patients) {
       res.render("patient", {
         patients: patients
       });
