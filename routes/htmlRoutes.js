@@ -8,11 +8,11 @@ module.exports = function(app) {
   });
 
   // patient route
-  app.get("/patients/:id", function(req, res) {
+  app.get("/patients", function(req, res) {
     // eslint-disable-next-line prettier/prettier
-    db.Patient.findOne({ where: { PatientId: req.query.id } }).then(function(patients) {
+    db.Patient.findOne({ where: { PatientId: req.query.id }, include: [db.Visit] }).then(function(patient) {
       res.render("patient", {
-        patients: patients
+        patients: patient
       });
     });
   });
