@@ -24,10 +24,6 @@
       <h5 class="text-center">Doctor assigned to the Patients</h5>
       <br>
       <div class="text-center">
-        <a href="/patient">
-          <button class="btn btn-lg btn-primary">
-            <span></span>Add New Patient</button>
-        </a>
         <a href="/">
           <button class="btn btn-lg btn-default">
             <span class="fa fa-home"></span>
@@ -42,7 +38,7 @@
           <div class="card-body">
             {{#each patients}}
 
-            <a>{{firstName}} {{lastName}}</a>
+            <a href="/patient?id={{id}}"><li>{{firstName}} {{lastName}}</li></a>
 
             {{else}}
 
