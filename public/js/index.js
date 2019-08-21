@@ -142,32 +142,43 @@ $("#new-patient-btn").on("click", function (event) {
       type: "POST",
       url: "api/patients/",
       data: JSON.stringify(newPatient)
+    }).then(function() {
+      location.reload();
     })
 
-    $("#new-first-name").val("");
-    $("#new-last-name").val("");
-    $("#new-email").val("");
-    $("#new-phone").val("");
-    $("#new-address-1").val("");
-    $("#new-address-2").val("");
-    $("#new-city").val("");
-    $("#new-state").val("");
-    $("#new-zip").val("");
+    
   }
 
 })
 
-// $("#add-visit-notes").on("click", function (event) {
-//   event.preventDefault();
+$("#add-visit-notes").on("click", function (event) {
+  event.preventDefault();
 
-//   let params = new URLSearchParams(document.location.search.substring(1));
-//   let id = params.get("id");
+  let params = new URLSearchParams(document.location.search.substring(1));
+  let id = params.get("id");
 
-//   console.log(id);
+  console.log(id);
 
-//   var newVisit = {
-//     visitNotes = $("#visit-notes").val().trim()
-//   }
+  var newVisit = {
+    notes: $("#visit-notes").val().trim(),
+    patientId: id
+  }
 
-//   if (newVisit.visitNotes )
-// })
+  console.log(newVisit);
+
+  if (!newVisit.notes) {
+    alert("Fill in the notes section.");
+  } else {
+    $.ajax({
+      headers: {
+        "Content-Type": "application/json"
+      },
+      type: "POST",
+      url: "/api/visits",
+      data: JSON.stringify(newVisit)
+    }).then(function(response) {
+      location.reload();
+    })
+
+  }
+})

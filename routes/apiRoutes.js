@@ -148,7 +148,8 @@ module.exports = function(app) {
   // POST route for saving a new visit
   app.post("/api/visits", function(req, res) {
     db.Visit.create({
-      notes: req.body.notes
+      notes: req.body.notes,
+      PatientId: req.body.patientId
     }).then(function(dbVisit) {
       res.json(dbVisit);
     });
