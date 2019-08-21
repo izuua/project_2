@@ -60,12 +60,12 @@
     </div>
 
 
-{{!-- 
+    {{!-- 
     <div class="card-body">
       <ul>
         {{!-- {{#each patients}} --}}
 
-{{!-- 
+    {{!-- 
         <div class="card" style="width: 18rem;">
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong>First Name:</strong> {{patients.firstName}} </li>
@@ -77,35 +77,35 @@
             <li class="list-group-item"><strong>State:</strong> {{patients.state}}</li>
             <li class="list-group-item"><strong>Zipcode:</strong> {{patients.zipcode}}</li>
           </ul>
-        </div> --}} 
+        </div> --}}
 
-        <!-- Central Modal Small -->
-        <div class="modal fade" id="centralModalMd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-          aria-hidden="true">
+    <!-- Central Modal Small -->
+    <div class="modal fade" id="centralModalMd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
 
-          <!-- Change class .modal-md to change the size of the modal -->
-          <div class="modal-dialog modal-md" role="document">
+      <!-- Change class .modal-md to change the size of the modal -->
+      <div class="modal-dialog modal-md" role="document">
 
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title w-100" id="myModalLabel">New Visit Notes</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title w-100" id="myModalLabel">New Visit Notes</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="visit-notes">Visit Notes</label>
+                <textarea type="text" class="form-control" id="visit-notes">
+                </textarea>
               </div>
-              <div class="modal-body">
-                <form role="form">
-                  <div class="form-group">
-                    <label for="visit-notes">Visit Notes</label>
-                    <textarea type="text" class="form-control" id="visit-notes">
-            </textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-sm" id="add-visit-notes">Save changes</button>
-              </div>
-            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary btn-sm" id="add-visit-notes">Save changes</button>
           </div>
         </div>
+      </div>
+    </div>
