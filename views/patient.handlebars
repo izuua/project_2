@@ -22,29 +22,29 @@
   </div>
 <div class="card-body">
   <ul>
-{{#each patients}}
+{{!-- {{#each patients}} --}}
 
 
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
    
 
-<li class="list-group-item"><strong>First Name:</strong> {{firstName}} </li> 
-<li class="list-group-item"><strong>Last Name:</strong> {{lastName}}</li> 
-<li class="list-group-item"><strong>Contact:</strong> {{contact}}</li> 
-<li class="list-group-item"><strong>Address1:</strong> {{address1}}</li>
-<li class="list-group-item"><strong>Address2:</strong> {{address2}}</li>
-<li class="list-group-item"><strong>City:</strong> {{city}}</li>
-<li class="list-group-item"><strong>State:</strong> {{state}}</li>
-<li class="list-group-item"><strong>Zipcode:</strong> {{zipcode}}</li>
+<li class="list-group-item"><strong>First Name:</strong> {{patients.firstName}} </li> 
+<li class="list-group-item"><strong>Last Name:</strong> {{patients.lastName}}</li> 
+<li class="list-group-item"><strong>Phone Number:</strong> {{patients.phone}}</li>
+<li class="list-group-item"><strong>Email Address:</strong> {{patients.email}}</li> 
+<li class="list-group-item"><strong>Address:</strong> {{patients.address1}} {{patients.address2}}</li>
+<li class="list-group-item"><strong>City:</strong> {{patients.city}}</li>
+<li class="list-group-item"><strong>State:</strong> {{patients.state}}</li>
+<li class="list-group-item"><strong>Zipcode:</strong> {{patients.zipcode}}</li>
   </ul>
 </div>
 
-
+{{!-- 
 {{else}}
 
 <p>No patient available</p>
-{{/each}}
+{{/each}} --}}
 </div>
   </ul>
 
