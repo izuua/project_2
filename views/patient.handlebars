@@ -13,7 +13,7 @@
           Add Visit Notes
         </button>
 
-      <a href="Home">
+      <a href="/">
         <button class="btn btn-lg btn-default">
           <span class="fa fa-home"></span>
         </button>
@@ -24,14 +24,22 @@
   <ul>
 {{#each patients}}
 
-<li>{{firstName}}</li> 
-<li>{{lastName}}</li>
-<li>{{contact}}</li>
-<li>{{address1}}</li>
-<li>{{address2}}</li>
-<li>{{city}}</li>
-<li>{{state}}</li>
-<li>{{zipcode}}</li>
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+   
+
+<li class="list-group-item"><strong>First Name:</strong> {{firstName}} </li> 
+<li class="list-group-item"><strong>Last Name:</strong> {{lastName}}</li> 
+<li class="list-group-item"><strong>Contact:</strong> {{contact}}</li> 
+<li class="list-group-item"><strong>Address1:</strong> {{address1}}</li>
+<li class="list-group-item"><strong>Address2:</strong> {{address2}}</li>
+<li class="list-group-item"><strong>City:</strong> {{city}}</li>
+<li class="list-group-item"><strong>State:</strong> {{state}}</li>
+<li class="list-group-item"><strong>Zipcode:</strong> {{zipcode}}</li>
+  </ul>
+</div>
+
 
 {{else}}
 
@@ -46,7 +54,6 @@
 
   <!-- Change class .modal-md to change the size of the modal -->
   <div class="modal-dialog modal-md" role="document">
-
 
     <div class="modal-content">
       <div class="modal-header">
