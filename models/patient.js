@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipcode: DataTypes.STRING,
-    // doctorId: DataTypes.INTEGER
+    //doctorId: DataTypes.INTEGER
   }, {});
   Patient.associate = function(models) {
     Patient.hasMany(models.Visit);
