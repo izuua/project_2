@@ -130,13 +130,29 @@ $("#new-patient-btn").on("click", function (event) {
 
   console.log(newPatient);
 
-  $.ajax({
-    headers: {
-      "Content-Type": "application/json"
-    },
-    type: "POST",
-    url: "api/patients/",
-    data: JSON.stringify(newPatient)
-  })
+  if (!newPatient.firstName || !newPatient.lastName || !newPatient.email || !newPatient.phone || !newPatient.address1 || !newPatient.address2 || !newPatient.city || !newPatient.state || !newPatient.zipcode) {
+    alert("You're missing a required field!");
+  } else if(isNaN(newPatient.zipcode) === true) {
+    alert("Zipcode needs to be a number");
+  } else {
+    $.ajax({
+      headers: {
+        "Content-Type": "application/json"
+      },
+      type: "POST",
+      url: "api/patients/",
+      data: JSON.stringify(newPatient)
+    })
+
+    $("#new-first-name").val("");
+    $("#new-last-name").val("");
+    $("#new-email").val("");
+    $("#new-phone").val("");
+    $("#new-address-1").val("");
+    $("#new-address-2").val("");
+    $("#new-city").val("");
+    $("#new-state").val("");
+    $("#new-zip").val("");
+  }
 
 })
