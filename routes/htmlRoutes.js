@@ -11,6 +11,7 @@ module.exports = function(app) {
   app.get("/patient", function(req, res) {
     // eslint-disable-next-line prettier/prettier
     db.Patient.findOne({ where: { Id: req.query.id }, include: [db.Visit] }).then(function(patient) {
+      console.log(patient);
       res.render("patient", {
         patients: patient
       });
