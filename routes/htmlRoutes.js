@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 var db = require("../models");
 var path = require("path");
 module.exports = function(app) {
@@ -19,7 +20,7 @@ module.exports = function(app) {
   app.get("/doctor", function(req, res) {
     // eslint-disable-next-line prettier/prettier
     console.log(req.query.id);
-    db.Patient.findAll({ where: { DoctorId: req.query.id }}).then(function(patient) {
+    db.Patient.findAll({ where: { DoctorId: req.query.id } }).then(function(patient) {
       res.render("doctor", {
         patients: patient
       });
