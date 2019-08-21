@@ -277,6 +277,16 @@ module.exports = {
           patientId: patientRows[0].id,
           createdAt: new Date(),
           updatedAt: new Date()
+        },{
+          notes: "Sinus pressure, and pressure headaches. Advised antihistamine and anti-inflammatory.",
+          patientId: patientRows[1].id,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },{
+          notes: "Sinus pressure, and pressure headaches. Advised antihistamine and anti-inflammatory.",
+          patientId: patientRows[3].id,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }])
       })
   },
