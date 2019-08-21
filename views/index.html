@@ -15,10 +15,6 @@
   <style>
     body {
       background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
-      padding-bottom: 100px;
-      padding-top: 100px;
-      padding-left: 500px;
-      padding-right: 600px;
 
     }
     </style>
@@ -27,35 +23,43 @@
 
 <body>
 
+<div class="container">
+  <div class="row">
+    <div class="col-0 col-lg-3"></div>
+    <div class="col-12 col-lg-6">
+      <form class="text-center border border-light p-5" action="#!">
 
-  
-  <form class="text-center border border-light p-5" action="#!">
-
-    <p class="h4 mb-4">Sign in</p>
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
-
-  
-    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-    <input type="text" id="doctor-id" class="form-control mb-4" placeholder="Doctor ID">
-
-    <div class="d-flex justify-content-around">
-      <div>
-
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-          <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+        <p class="h4 mb-4">Sign in</p>
+        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
+    
+      
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+    
+        <input type="text" id="doctor-id" class="form-control mb-4" placeholder="Doctor ID">
+    
+        <div class="d-flex justify-content-around">
+          <div>
+    
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+              <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+          </div>
+          <div>
+    
+            <a href="">Forgot password?</a>
+          </div>
         </div>
-      </div>
-      <div>
-
-        <a href="">Forgot password?</a>
-      </div>
+    
+        <button class="btn btn-info btn-block my-4" type="submit" id="sign-in-btn">Sign in</button>
+    
+      </form>
     </div>
-
-    <button class="btn btn-info btn-block my-4" type="submit" id="sign-in-btn">Sign in</button>
-
-  </form>
+    <div class="col-0 col-lg-3"></div>
+  </div>
+</div>
+  
+ 
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->

@@ -32,19 +32,37 @@
       </div>
     </div>
 
-    <div class="container">
+     <div class="container">
       <div class="row">
         <div class="col-6">
           <div class="card-body">
-            {{#each patients}}
+            {{!-- ................................... --}}
+
+<!-- Card Light -->
+ <div class="card"> 
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <h4 class="card-title">Patient Names</h4>
+    <hr>
+    <!-- Text -->
+    <p class="card-text"> {{#each patients}}
 
             <a href="/patient?id={{id}}"><li>{{firstName}} {{lastName}}</li></a>
 
             {{else}}
 
             <p>No patient available</p>
-            {{/each}}
-          </div>
+            {{/each}}</p>
+    <!-- Link -->
+    {{!-- <a href="#!" class="black-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a> --}}
+
+  </div>
+
+</div>
+
+           </div>
         </div>
         <div class="col-6">
           <div class="card">
