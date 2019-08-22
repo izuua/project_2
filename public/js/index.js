@@ -132,7 +132,7 @@ $("#new-patient-btn").on("click", function (event) {
 
   console.log(newPatient);
 
-  if (!newPatient.firstName || !newPatient.lastName || !newPatient.email || !newPatient.phone || !newPatient.address1 || !newPatient.address2 || !newPatient.city || !newPatient.state || !newPatient.zipcode) {
+  if (!newPatient.firstName || !newPatient.lastName || !newPatient.email || !newPatient.phone || !newPatient.address1 || !newPatient.city || !newPatient.state || !newPatient.zipcode) {
     alert("You're missing a required field!");
   } else if(isNaN(newPatient.zipcode) === true) {
     alert("Zipcode needs to be a number");
