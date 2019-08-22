@@ -103,7 +103,7 @@ $("#sign-in-btn").on("click", function (event) {
 
   var doctorId = $("#doctor-id").val().trim()
   var url = "/doctor?id=" + doctorId
-  console.log(url);
+  console.log("sign-in-btn url ==> ", url);
   window.location = url;
 });
 
@@ -113,7 +113,7 @@ $("#new-patient-btn").on("click", function (event) {
   let params = new URLSearchParams(document.location.search.substring(1));
   let id = params.get("id");
 
-  console.log(id);
+  console.log("new-patient-btn id ==>",id);
 
   var newPatient = {
     firstName: $("#new-first-name").val().trim(),
@@ -128,7 +128,7 @@ $("#new-patient-btn").on("click", function (event) {
     DoctorId: id
   };
 
-  console.log(newPatient);
+  console.log("newPatient ==> ", newPatient);
 
   if (!newPatient.firstName || !newPatient.lastName || !newPatient.email || !newPatient.phone || !newPatient.address1 || !newPatient.address2 || !newPatient.city || !newPatient.state || !newPatient.zipcode) {
     alert("You're missing a required field!");
@@ -157,20 +157,20 @@ $("#add-visit-notes").on("click", function (event) {
   let params = new URLSearchParams(document.location.search.substring(1));
   let id = params.get("id");
 
-  console.log(id);
+  console.log("add-visit-notes id ==>", id);
 
   var newVisit = {
     notes: $("#visit-notes").val().trim(),
     patientId: id
   }
 
-  console.log(newVisit);
+  console.log("add-visit-notes newVisit ==>",newVisit);
 
   if (!newVisit.notes) {
     alert("Fill in the notes section.");
   } else {
     $.ajax({
-      headers: {
+      headers: { 
         "Content-Type": "application/json"
       },
       type: "POST",

@@ -14,7 +14,7 @@
 
   <style>
     body {
-      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg");
 
     }
     </style>
@@ -27,7 +27,41 @@
   <div class="row">
     <div class="col-0 col-lg-3"></div>
     <div class="col-12 col-lg-6">
-      <form class="text-center border border-light p-5" action="#!">
+
+
+      <form class="login">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control  mb-4" id="email-input" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control  mb-4" id="password-input" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputDoctorId1">Password</label>
+        <input type="text" class="form-control mb-4" id="doctor-id"  placeholder="Doctor ID">
+
+        <div class="d-flex justify-content-around">
+            <div>
+      
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+              </div>
+            </div>
+            <div>
+      
+              <a href="">Forgot password?</a>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-default">Login</button>
+        </div>
+      </form>
+
+
+      <!-- <form class="text-center border border-light p-5" action="#!">
 
         <p class="h4 mb-4">Sign in</p>
         <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
@@ -53,7 +87,7 @@
     
         <button class="btn btn-info btn-block my-4" type="submit" id="sign-in-btn">Sign in</button>
     
-      </form>
+      </form> -->
     </div>
     <div class="col-0 col-lg-3"></div>
   </div>
@@ -70,7 +104,8 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
-  <script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript" src="/js/login.js"></script>
+  <!-- <script type="text/javascript" src="/public/js/login.js"></script> -->
 </body>
 
 </html>
