@@ -5,10 +5,8 @@
     <hr>
     <h5 class="text-center">Patient Information</h5>
     <br>
-
     <div class="text-center">
 
-      {{!-- <button class="btn btn-lg btn-primary">Last Visits</button> --}}
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalMd">
         Add Visit Notes
       </button>
@@ -50,8 +48,8 @@
           <div class="card-body">
             {{#each patients.Visits}}
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Date:</strong> {{createdAt}}</li>
-              <li class="list-group-item"><strong>Notes:</strong> {{notes}}</li>
+              <li class="list-group-item"><strong>Date:</strong> {{createdAt}} <br>
+              <strong>Notes:</strong> {{notes}}</li>
             </ul>
             {{/each}}
           </div>
