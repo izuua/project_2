@@ -1,4 +1,4 @@
-# Doctor CRM
+# Healthcare CRM
 A CRM app for use by a doctor's office.
 
 # Instructions
